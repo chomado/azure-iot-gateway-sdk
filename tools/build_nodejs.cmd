@@ -48,7 +48,31 @@ copy node\build\Release\lib\*.lib dist\lib
 popd
 
 rem Export environment variables for where the include/lib files can be found
-set "NODE_INCLUDE=%build-root%\dist\inc"
-set "NODE_LIB=%build-root%\dist\lib"
+
+
+echo.
+
+echo.Node JS has been built and the includes and library files are in:
+
+echo.
+
+echo.    %build-root%\dist
+
+echo.
+
+echo.Export the following variables so that the Azure IoT Gateway SDK build scripts can find these files.
+
+echo.
+
+echo.    set NODE_INCLUDE=%build-root%\dist\inc\
+
+echo.    set NODE_LIB=%build-root%\dist\lib\
+
+echo.
+
+
+
+set NODE_INCLUDE=%build-root%\dist\inc\
+set NODE_LIB=%build-root%\dist\lib\
 
 goto :eof
